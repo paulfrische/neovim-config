@@ -13,7 +13,6 @@ end
 
 local themes = {
   'folke/tokyonight.nvim',
-  'rebelot/kanagawa.nvim',
 }
 
 for idx, theme in ipairs(themes) do
