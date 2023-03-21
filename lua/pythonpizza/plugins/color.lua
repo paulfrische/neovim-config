@@ -1,4 +1,4 @@
-local transparent = false
+local transparent = true
 
 local function color_config()
   vim.opt.termguicolors = true
