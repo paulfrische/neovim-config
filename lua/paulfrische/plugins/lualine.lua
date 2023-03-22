@@ -18,10 +18,12 @@ return {
       },
       sections = {
         lualine_a = { { 'mode', icons_enabled = true, icon = '漣' } },
-        lualine_b = { function()
-          local word_count = util.words_in_buffer()
-          return '  ' .. word_count .. '  '
-        end },
+        lualine_b = {
+          function()
+            local word_count = util.words_in_buffer()
+            return '  ' .. word_count .. '  '
+          end,
+        },
         lualine_c = {
           { 'diagnostics', sources = { 'nvim_lsp' } },
           function()

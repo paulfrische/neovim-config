@@ -5,7 +5,7 @@ return {
       auto_update = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
       neovim_image_text = 'The One True Text Editor', -- Text displayed when hovered over the Neovim image
       main_image = 'neovim', -- Main image display (either "neovim" or "file")
-      debounce_timeout = 10, -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
+      debounce_timeout = 3, -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
       enable_line_number = false, -- Displays the current line number instead of the current project
       blacklist = {}, -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
       buttons = true, -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
@@ -13,7 +13,17 @@ return {
       show_time = true, -- Show the timer
 
       -- Rich Presence text options
-      editing_text = 'Torturing his keyboard in %s', -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
+      editing_text = function(name)
+        local texts = {
+          'Torturing his keyboard in ',
+          'Loosing hair by editing ',
+          'Getting roasted in ',
+          'Uses Arch BTW. file: ',
+        }
+
+        local index = math.random(require('paulfrische.util').length(texts))
+        return texts[index] .. name
+      end, -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
       file_explorer_text = 'Browsing %s', -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
       git_commit_text = 'Committing changes', -- Format string rendered when committing changes in git (either string or function(filename: string): string)
       plugin_manager_text = 'Managing plugins', -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)

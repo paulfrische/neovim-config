@@ -46,12 +46,12 @@ M.attach = function()
   bufmap('n', 'gf', vim.lsp.buf.format)
 
   -- code actions
-  bufmap({'n', 'v'}, 'ga', vim.lsp.buf.code_action)
+  bufmap({ 'n', 'v' }, 'ga', vim.lsp.buf.code_action)
 end
 
 M.setup = function()
   require('paulfrische.plugins.lsp.cmp').setup({
-    border = ''
+    border = '',
   })
 
   require('mason').setup()
@@ -61,7 +61,7 @@ M.setup = function()
     library = {
       plugins = { 'nvim-dap-ui' },
       types = true,
-    }
+    },
   })
 
   require('mason-lspconfig').setup({

@@ -42,4 +42,8 @@ vim.keymap.set('n', '<leader>h', '<cmd>split<CR>')
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<CR>')
 
 -- source selected lua code
-vim.keymap.set({'v', 'vs', 'V', 'Vs'}, '<leader>l', require('paulfrische.util').source_selected)
+vim.keymap.set(
+  { 'v', 'vs', 'V', 'Vs' },
+  '<leader>l',
+  require('paulfrische.util').source_selected
+)

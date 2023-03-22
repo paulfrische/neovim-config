@@ -1,7 +1,7 @@
 local M = {}
 
-local input_factory = function (prompt)
-  return function ()
+local input_factory = function(prompt)
+  return function()
     return vim.fn.input(prompt)
   end
 end
@@ -55,8 +55,8 @@ M.setup_python = function()
       request = 'launch',
       name = 'Launch File',
       program = '${file}',
-      pythonPath = python
-    }
+      pythonPath = python,
+    },
   }
 end
 
@@ -72,42 +72,42 @@ M.setup_native = function()
 
   dap.configurations.cpp = {
     {
-      name = "Launch file",
-      type = "cppdbg",
-      request = "launch",
-      program = function ()
+      name = 'Launch file',
+      type = 'cppdbg',
+      request = 'launch',
+      program = function()
         return input_factory('Path to executable: ')
       end,
       cwd = '${workspaceFolder}',
       stopAtEntry = true,
-    }
+    },
   }
 
   dap.configurations.c = {
     {
-      name = "Launch file",
-      type = "cppdbg",
-      request = "launch",
-      program = function ()
+      name = 'Launch file',
+      type = 'cppdbg',
+      request = 'launch',
+      program = function()
         return vim.fn.input('Path to executable: ')
       end,
       cwd = '${workspaceFolder}',
       stopAtEntry = true,
-    }
+    },
   }
 
   dap.configurations.rust = {
     {
-      name = "Launch file",
-      type = "cppdbg",
-      request = "launch",
-      program = function ()
+      name = 'Launch file',
+      type = 'cppdbg',
+      request = 'launch',
+      program = function()
         local name = vim.fn.input('Binary name: ')
         return 'target/debug/' .. name
       end,
       cwd = '${workspaceFolder}',
       stopAtEntry = true,
-    }
+    },
   }
 end
 

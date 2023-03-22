@@ -4,6 +4,9 @@
 -- |  __/ (_| | |_| | | |  _|| |  | \__ \ (__| | | |  __/
 -- |_|   \__,_|\__,_|_| |_|  |_|  |_|___/\___|_| |_|\___|
 
+-- because I need random for presence.nvim
+math.randomseed(os.time())
+
 require('paulfrische')
 
 local util = require('paulfrische.util')

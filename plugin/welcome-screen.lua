@@ -1,5 +1,5 @@
 if true then
-return
+  return
 end
 -- inspired by https://gitlab.com/4w/neovim-config/-/blob/main/plugin/simple_ascii_dash.lua
 
