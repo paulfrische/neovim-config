@@ -8,7 +8,7 @@ end
 function MyStatusLine()
   local statusline = ''
   statusline = statusline
-    .. '%!v:lua.require(\'pythonpizza.statusline\').Mode()'
+    .. '%!v:lua.require(\'paulfrische.statusline\').Mode()'
   return statusline
 end
 

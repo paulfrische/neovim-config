@@ -3,7 +3,7 @@ return {
   dependencies = { 'kyazdani42/nvim-web-devicons' },
   event = 'UIEnter',
   config = function()
-    local util = require('pythonpizza.util')
+    local util = require('paulfrische.util')
     require('lualine').setup({
       options = {
         component_separators = { left = '', right = '' },

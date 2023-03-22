@@ -50,7 +50,7 @@ M.attach = function()
 end
 
 M.setup = function()
-  require('pythonpizza.plugins.lsp.cmp').setup({
+  require('paulfrische.plugins.lsp.cmp').setup({
     border = ''
   })
 

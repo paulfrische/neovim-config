@@ -2,7 +2,7 @@ return {
   -- LSP Support
   'neovim/nvim-lspconfig',
 
-  config = require('pythonpizza.plugins.lsp.config').setup,
+  config = require('paulfrische.plugins.lsp.config').setup,
 
   dependencies = {
 

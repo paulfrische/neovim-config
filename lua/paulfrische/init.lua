@@ -13,11 +13,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup('pythonpizza.plugins')
+require('lazy').setup('paulfrische.plugins')
 
-pcall(require, 'pythonpizza.set')
-pcall(require, 'pythonpizza.remap')
-pcall(require, 'pythonpizza.statusline')
-pcall(require, 'pythonpizza.disable-builtin')
-pcall(require, 'pythonpizza.autocommands')
-pcall(require, 'pythonpizza.welcome-screen')
+pcall(require, 'paulfrische.set')
+pcall(require, 'paulfrische.remap')
+pcall(require, 'paulfrische.statusline')
+pcall(require, 'paulfrische.disable-builtin')
+pcall(require, 'paulfrische.autocommands')
+pcall(require, 'paulfrische.welcome-screen')
