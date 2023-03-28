@@ -7,7 +7,8 @@ return {
     require('lualine').setup({
       options = {
         component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
         always_divide_middle = false,
         globalstatus = true,
         refresh = {

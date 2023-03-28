@@ -27,13 +27,21 @@ return {
         },
       },
       defaults = {
-        winblend = 0,
+        borderchars = {
+          { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+          prompt = { "─", "│", " ", "│", '┌', '┐', "│", "│" },
+          results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+          preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        },
+        prompt_prefix = ' 🔎 ',
         layout_strategy = 'horizontal',
+
         file_ignore_patterns = {
           '__pycache__/',
           'node_modules/',
           '.git/',
         },
+
         layout_config = {
           width = 0.95,
           height = 0.95,

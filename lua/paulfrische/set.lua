@@ -21,7 +21,6 @@ vim.opt.listchars:append('trail:·')
 vim.opt.fillchars:append('eob: ')
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
-vim.opt.guicursor = nil
 
 -- vim.opt.cursorline = true
 -- vim.opt.cursorcolumn = true
