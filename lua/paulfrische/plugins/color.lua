@@ -1,4 +1,4 @@
-local transparent = true
+local transparent = false
 
 local function color_config()
   vim.opt.termguicolors = true
@@ -8,16 +8,17 @@ local function color_config()
     style = 'night',
   })
 
-  vim.cmd.colorscheme('tokyonight')
+  vim.cmd.colorscheme('catppuccin-mocha')
 end
 
 local themes = {
-  'folke/tokyonight.nvim',
+  { 'folke/tokyonight.nvim' },
+  { "catppuccin/nvim", name = "catppuccin" }
 }
 
 for idx, theme in ipairs(themes) do
   ---@diagnostic disable-next-line: assign-type-mismatch
-  themes[idx] = { theme, lazy = false, priority = 1000, config = color_config }
+  themes[idx] = vim.tbl_deep_extend('keep', theme, { lazy = false, priority = 1000, config = color_config })
 end
 
 return themes
