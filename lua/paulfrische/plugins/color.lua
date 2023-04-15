@@ -8,7 +8,7 @@ local function color_config()
     style = 'night',
   })
 
-  vim.cmd.colorscheme('catppuccin-mocha')
+  vim.cmd.colorscheme('tokyonight')
 end
 
 local themes = {
