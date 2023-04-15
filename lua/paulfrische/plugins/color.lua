@@ -6,6 +6,9 @@ local function color_config()
   require('tokyonight').setup({
     transparent = transparent,
     style = 'night',
+    styles = {
+      floats = transparent and 'transparent',
+    },
   })
 
   vim.cmd.colorscheme('tokyonight')
