@@ -89,6 +89,16 @@ M.setup = function()
       })
     end,
   })
+
+  lspconfig.rust_analyzer.setup({
+    settings = {
+      ['rust-analyzer'] = {
+        cargo = {
+          allFeatures = true,
+        }
+      }
+    }
+  })
 end
 
 return M
