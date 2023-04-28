@@ -1,6 +1,6 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { 'kyazdani42/nvim-web-devicons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   event = 'UIEnter',
   config = function()
     local util = require('paulfrische.util')

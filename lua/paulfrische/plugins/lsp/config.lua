@@ -90,6 +90,7 @@ M.setup = function()
     end,
   })
 
+  -- fix autocomplete etc. for extern libraries
   lspconfig.rust_analyzer.setup({
     settings = {
       ['rust-analyzer'] = {
