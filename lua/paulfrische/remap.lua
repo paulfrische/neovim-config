@@ -41,6 +41,9 @@ vim.keymap.set('n', '<A-l>', '<C-w>l')
 vim.keymap.set('n', '<leader>h', '<cmd>split<CR>')
 vim.keymap.set('n', '<leader>v', '<cmd>vsplit<CR>')
 
+-- add current dir to rtp
+vim.keymap.set('n', '<leader>r', ':set rtp+=.<CR>')
+
 -- source selected lua code
 vim.keymap.set(
   { 'v', 'vs', 'V', 'Vs' },

@@ -92,10 +92,27 @@ M.setup = function()
 
   -- fix autocomplete etc. for extern libraries
   lspconfig.rust_analyzer.setup({
+    on_attach = M.attach,
     settings = {
       ['rust-analyzer'] = {
         cargo = {
           allFeatures = true,
+        }
+      }
+    }
+  })
+
+  local python = string.gsub(vim.fn.system('which python3'), '\n', '')
+  print(python)
+
+  lspconfig.pylsp.setup({
+    on_attach = M.attach,
+    settings = {
+      pylsp = {
+        plugins = {
+          jedi = {
+            environment = python,
+          }
         }
       }
     }

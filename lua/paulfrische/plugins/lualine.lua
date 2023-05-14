@@ -18,7 +18,7 @@ return {
         },
       },
       sections = {
-        lualine_a = { { 'mode', icons_enabled = true, icon = '漣' } },
+        lualine_a = { { 'mode', icons_enabled = true, icon = '' } },
         lualine_b = {
           function()
             local word_count = util.words_in_buffer()

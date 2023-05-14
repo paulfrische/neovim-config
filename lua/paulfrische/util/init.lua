@@ -1,10 +1,16 @@
 local M = {}
 
+--- prints and returns a table
+---@param v table
+---@return table
 M.print_table = function(v)
   print(vim.inspect(v))
   return v
 end
 
+--- return length of table
+---@param tbl table
+---@return integer
 M.length = function(tbl)
   local len = 0
   for _, _ in pairs(tbl) do
@@ -13,6 +19,8 @@ M.length = function(tbl)
   return len
 end
 
+--- return number of words in current buffer
+---@return integer
 M.words_in_buffer = function()
   local words = 0
   local text = vim.api.nvim_buf_get_lines(0, 0, -1, false)

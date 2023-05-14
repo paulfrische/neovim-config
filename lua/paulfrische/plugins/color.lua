@@ -1,4 +1,4 @@
-local transparent = true
+local transparent = false
 
 local function color_config()
   vim.opt.termguicolors = true
@@ -16,7 +16,6 @@ end
 
 local themes = {
   { 'folke/tokyonight.nvim' },
-  { "catppuccin/nvim", name = "catppuccin" }
 }
 
 for idx, theme in ipairs(themes) do
