@@ -103,7 +103,6 @@ M.setup = function()
   })
 
   local python = string.gsub(vim.fn.system('which python3'), '\n', '')
-  print(python)
 
   lspconfig.pylsp.setup({
     on_attach = M.attach,
