@@ -1,6 +1,6 @@
 return {
   'echasnovski/mini.nvim',
-  event = 'UIEnter',
+  event = 'VimEnter',
   config = function()
     require('mini.surround').setup()
     require('mini.comment').setup()

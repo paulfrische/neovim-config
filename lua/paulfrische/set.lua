@@ -22,8 +22,8 @@ vim.opt.fillchars:append('eob: ')
 vim.opt.undofile = true
 vim.opt.colorcolumn = '80'
 
--- vim.opt.cursorline = true
--- vim.opt.cursorcolumn = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 vim.opt.updatetime = 50
 

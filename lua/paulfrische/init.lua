@@ -17,7 +17,5 @@ require('lazy').setup('paulfrische.plugins')
 
 pcall(require, 'paulfrische.set')
 pcall(require, 'paulfrische.remap')
-pcall(require, 'paulfrische.statusline')
 pcall(require, 'paulfrische.disable-builtin')
 pcall(require, 'paulfrische.autocommands')
-pcall(require, 'paulfrische.welcome-screen')
