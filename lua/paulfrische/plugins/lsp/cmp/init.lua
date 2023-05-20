@@ -5,7 +5,6 @@ M.sources = {
   { name = 'luasnip', keyword_length = 2 },
   { name = 'emoji' },
   { name = 'path' },
-  { name = 'buffer', keyword_length = 3 },
 }
 
 M.formatting = {
