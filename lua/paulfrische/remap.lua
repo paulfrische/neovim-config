@@ -1,45 +1,47 @@
+local map = require('paulfrische.util').map
+
 -- put the cursor in the center of the screen when searching/jumping aroundremap
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', 'n', 'nzz')
-vim.keymap.set('n', 'N', 'Nzz')
+map('n', '<C-d>', '<C-d>zz')
+map('n', '<C-u>', '<C-u>zz')
+map('n', 'n', 'nzz')
+map('n', 'N', 'Nzz')
 
 -- deleting/pasting in visualmode without yanking
-vim.keymap.set('v', 'D', '"_d')
-vim.keymap.set('v', 'P', '"_dp')
+map('v', 'D', '"_d')
+map('v', 'P', '"_dp')
 
 -- remove search highlights in normal mode
-vim.keymap.set('n', '<ESC>', ':noh<CR>:echo<CR>')
+map('n', '<ESC>', ':noh<CR>:echo<CR>')
 
 -- code runner
-vim.keymap.set('n', '<leader>c', ':Jaq<CR>')
+map('n', '<leader>c', ':Jaq<CR>')
 
 -- terminal
-vim.keymap.set('n', '<leader>t', ':ToggleTerm direction=float<CR>')
+map('n', '<leader>t', ':ToggleTerm direction=float<CR>')
 
 -- lazygit
-vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>')
+map('n', '<leader>gg', ':LazyGit<CR>')
 
 -- move around text in visual-mode
-vim.keymap.set('v', '<C-j>', ':m \'>+1<CR>gv=gv')
-vim.keymap.set('v', '<C-k>', ':m \'<-2<CR>gv=gv')
+map('v', '<C-j>', ':m \'>+1<CR>gv=gv')
+map('v', '<C-k>', ':m \'<-2<CR>gv=gv')
 
 -- file explorer
-vim.keymap.set('n', '<leader>x', ':NvimTreeToggle<CR>')
+map('n', '<leader>x', ':NvimTreeToggle<CR>')
 
 -- no neck pain
-vim.keymap.set('n', '<leader>z', ':ZenMode<CR>')
+map('n', '<leader>z', ':ZenMode<CR>')
 
 -- escape terminal
-vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
+map('t', '<ESC>', '<C-\\><C-n>')
 
 -- splits
-vim.keymap.set('n', '<A-h>', '<C-w>h')
-vim.keymap.set('n', '<A-j>', '<C-w>j')
-vim.keymap.set('n', '<A-k>', '<C-w>k')
-vim.keymap.set('n', '<A-l>', '<C-w>l')
-vim.keymap.set('n', '<leader>h', '<cmd>split<CR>')
-vim.keymap.set('n', '<leader>v', '<cmd>vsplit<CR>')
+map('n', '<A-h>', '<C-w>h')
+map('n', '<A-j>', '<C-w>j')
+map('n', '<A-k>', '<C-w>k')
+map('n', '<A-l>', '<C-w>l')
+map('n', '<leader>h', '<cmd>split<CR>')
+map('n', '<leader>v', '<cmd>vsplit<CR>')
 
 -- add current dir to rtp
-vim.keymap.set('n', '<leader>r', ':set rtp+=.<CR>')
+map('n', '<leader>r', ':set rtp+=.<CR>')

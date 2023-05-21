@@ -1,10 +1,7 @@
 local M = {}
 
 M.attach = function()
-  local bufmap = function(mode, lhs, rhs)
-    local opts = { buffer = true }
-    vim.keymap.set(mode, lhs, rhs, opts)
-  end
+  local bufmap = require('paulfrische.util').bufmap
 
   -- Displays hover information about the symbol under the cursor
   bufmap('n', 'K', vim.lsp.buf.hover)

@@ -32,4 +32,13 @@ M.words_in_buffer = function()
   return words
 end
 
+M.map = function (mode, lhs, rhs, opt)
+  vim.keymap.set(mode, lhs, rhs, opt)
+end
+
+M.bufmap = function(mode, lhs, rhs)
+  local opts = { buffer = true }
+  vim.keymap.set(mode, lhs, rhs, opts)
+end
+
 return M
