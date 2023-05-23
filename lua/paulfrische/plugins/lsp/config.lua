@@ -1,6 +1,8 @@
 local M = {}
 
-M.attach = function()
+M.attach = function(client, buffnr)
+  require('lsp-inlayhints').on_attach(client, buffnr)
+
   local bufmap = require('paulfrische.util').bufmap
 
   -- Displays hover information about the symbol under the cursor
