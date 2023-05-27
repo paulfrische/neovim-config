@@ -36,12 +36,16 @@ map('n', '<leader>z', ':ZenMode<CR>')
 map('t', '<ESC>', '<C-\\><C-n>')
 
 -- splits
-map('n', '<A-h>', '<C-w>h')
-map('n', '<A-j>', '<C-w>j')
-map('n', '<A-k>', '<C-w>k')
-map('n', '<A-l>', '<C-w>l')
+map('n', '<M-h>', '<C-w>h')
+map('n', '<M-j>', '<C-w>j')
+map('n', '<M-k>', '<C-w>k')
+map('n', '<M-l>', '<C-w>l')
 map('n', '<leader>h', '<cmd>split<CR>')
 map('n', '<leader>v', '<cmd>vsplit<CR>')
+
+-- buffers
+map('n', '<M-n>', '<cmd>bnext<CR>')
+map('n', '<M-p>', '<cmd>bprevious<CR>')
 
 -- add current dir to rtp
 map('n', '<leader>r', ':set rtp+=.<CR>')

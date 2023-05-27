@@ -45,6 +45,7 @@ M.attach = function(client, buffnr)
   bufmap('n', 'gf', vim.lsp.buf.format)
 
   -- code actions
+  bufmap({ 'n', 'v' }, '<M-CR>', vim.lsp.buf.code_action)
   bufmap({ 'n', 'v' }, 'ga', vim.lsp.buf.code_action)
 end
 
